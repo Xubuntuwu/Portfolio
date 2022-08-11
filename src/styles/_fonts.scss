@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../assets/fonts/Playfair_Display1/PlayfairDisplay-Italic.woff2') format('woff2'),
+        url('../assets/fonts/Playfair_Display1/PlayfairDisplay-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../assets/fonts/Playfair_Display1/PlayfairDisplay-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Playfair_Display1/PlayfairDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rubik Dirt';
+    src: url('../assets/fonts/RubikDirt/RubikDirt-Regular.woff2') format('woff2'),
+        url('../assets/fonts/RubikDirt/RubikDirt-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

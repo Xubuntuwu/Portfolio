@@ -1,0 +1,37 @@
+@use 'technologiesanimation';
+$primary-color: hsl(192, 100%, 50%);
+$primary-color-h: 192;
+$primary-color-s: 100%;
+$primary-color-l: 50%;
+$secondary-color: #0694B8;
+$highlight-color: #6C63FF;
+
+$title-font-size: 3rem;
+
+.main-technologies-container{
+    max-height: 100vh;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-margin-top: 200px;
+
+    // border: none;
+    // position: relative;
+    // width: 210px;
+    // height: 140px;
+    // margin: 80px auto;
+    // perspective: 1000px;
+
+    .title{
+        padding: 0 5rem 0 5rem;
+        font-size: $title-font-size;
+        font-weight: normal;
+        // font-style: italic;
+        font-family: 'Playfair Display', sans-serif;
+    }
+    img{
+        max-height: 100%;  
+    }
+}

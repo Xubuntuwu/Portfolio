@@ -1,0 +1,78 @@
+.main-introduction{
+    svg{
+        #book1{
+            transform-origin: center;
+            transform-box: fill-box;
+            animation: 5s flyingUpDown linear infinite alternate;
+        }
+        #book2{
+            transform-origin: center;
+            transform-box: fill-box;
+            animation: 3s flyingUpDown linear infinite alternate-reverse;
+        }
+        #head{
+            transform-origin: bottom;
+            transform-box: fill-box;
+            animation: 3s nodding ease-in-out infinite alternate;
+        }
+    }
+}
+
+.paused{
+    -webkit-animation-play-state:paused !important;
+    -moz-animation-play-state:paused !important;
+    -o-animation-play-state:paused !important; 
+    animation-play-state:paused !important;
+}
+
+@keyframes flyingUpDown{
+    from{
+        transform: translateY(0);
+    }
+    10%{
+        transform: translateY(20px) rotateZ(-15deg);
+    }
+    20%{
+        transform: translateY(40px) rotateZ(15deg);
+    }
+    30%{
+        transform: translateY(60px) rotateZ(-15deg);
+    }
+    40%{
+        transform: translateY(80px) rotateZ(15deg);
+    }
+    50%{
+        transform: translateY(100px) rotateZ(-15deg);
+    }
+    60%{
+        transform: translateY(50px) rotateZ(15deg);
+    }
+    70%{
+        transform: translateY(25px) rotateZ(-15deg);
+    }
+    80%{
+        transform: translateY(0px) rotateZ(15deg);
+    }
+    90%{
+        transform: translateY(-50px) rotateZ(-15deg);
+    }
+    to{
+        transform: translateY(-100px) rotateZ(-30deg);
+    }
+}
+
+@keyframes nodding{
+    from{
+        transform: rotateZ(0deg);
+    }
+    33%{
+        transform: rotateZ(15deg);
+    }
+    67%{
+        transform: rotateZ(0deg);
+
+    }
+    to{
+        transform: rotateZ(-30deg);
+    }
+}

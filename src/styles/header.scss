@@ -1,0 +1,55 @@
+$primary-color: #00ccff;
+$primary-color-h: 192;
+$primary-color-s: 100%;
+$primary-color-l: 50%;
+$secondary-color: #0694B8;
+$highlight-color: #6C63FF;
+
+$title-font-size: 3rem;
+$card-amount-under: 3;
+$card-amount-over: 3;
+
+header{
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    background-color: #3F3D56;
+    z-index: 10;
+    color: white;
+    nav{
+        display: flex;
+        justify-content: space-between;
+        #logo{
+            font-size: 3rem;
+            font-family: 'Rubik Dirt','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            &:hover{
+                cursor: pointer;
+                transition: color 500ms;
+                color: $highlight-color;
+            }
+        }
+        ul{
+            display: flex;
+            min-width: fit-content;
+            width: 30vw;
+            justify-content: space-between;
+            list-style: none;
+            font-weight: bold;
+            li:hover{
+                transition: color 100ms, transform 300ms;
+                cursor: pointer;
+                color: $primary-color;
+                transform: scale(1.1);
+            }
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}

@@ -1,0 +1,184 @@
+@use 'fonts';
+@use 'mainsvg';
+
+@mixin text-outline($color, $width){
+    text-shadow: -$width -$width 0 $color, $width -$width 0 $color, -$width $width 0 $color, $width $width 0 $color;
+}
+
+// $primary-color: hsl(192, 91%, 36%);
+$primary-color: #00CCFF;
+$highlight-color: hsl(243, 100%, 69%);
+$primary-color-h: 192;
+$primary-color-s: 91%;
+$primary-color-l: 36%;
+$title-font-size: 3rem;
+
+html, body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    max-width: 100vw;
+}
+
+
+::selection{
+    background-color: $highlight-color;
+}
+
+::-webkit-scrollbar {
+    width: 10px; /* Mostly for vertical scrollbars */
+    height: 10px; /* Mostly for horizontal scrollbars */
+  }
+::-webkit-scrollbar-thumb { /* Foreground */
+    background: $highlight-color;
+    border-radius: 50px;
+  }
+::-webkit-scrollbar-track { /* Background */
+    background-color: $primary-color;
+  }
+
+#load{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:9999;
+    background:url("../assets/gifs/loading.gif") no-repeat center center $primary-color;
+}
+
+#content{
+    position: relative;
+}
+
+.main-introduction{
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    padding-bottom: 0;
+    font-family: 'Playfair Display', sans-serif;
+
+    .content-wrap{
+        width: 90%;
+        min-height: min-content;
+        max-height: 80vh;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+    }
+    div.image-container{
+        display: inline-block;
+        position: relative;
+    }
+    img{
+        max-height: 80vh;
+        max-width: 45vw;
+        box-shadow: 0px 4px 18px 5px rgba(0,0,0,0.3);
+    }
+    svg{
+        max-height: 80vh;
+        width: 45vw;
+    }
+    .name{
+        font-size: 4vw;
+        position: absolute;
+        bottom: 5%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin-bottom: 0;
+        color: white;
+        @include text-outline($highlight-color, 1px)
+    }
+    div.about-me{
+        background-color: white;
+        box-sizing: border-box;
+        padding: 2em;
+        height: 100%;
+        font-size: large;
+        box-shadow: 0px 4px 18px 5px rgba(0,0,0,0.3);
+
+        .title{
+            font-size: $title-font-size;
+            font-weight: normal;
+            // font-style: italic;
+        }
+        .personal-links{
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            height: 3.5em;
+            svg{
+                left: auto;
+                height: 3em;
+                width: auto;
+                transition: height 100ms;
+            }
+            svg:hover{
+                height: 3.5em;
+                animation: 500ms jumping cubic-bezier(0, 1.01, 0.98, 0.99) infinite alternate,
+                250ms colorfill forwards;
+            }
+        }
+    }
+    .background-twist{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $primary-color;
+        z-index: -1;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20vw), 0% 100%); 
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20vw), 0% 100%);
+    }
+}
+
+.leftEnter{
+    animation: 1.5s enterLeft ease 1 reverse;
+}
+
+.rightEnter{
+    animation: 4s enterRight ease-in 1 reverse
+}
+
+@keyframes jumping{
+    from{
+        transform: translateY(0);
+    }
+
+    to{
+        transform: translateY(-20px);
+    }
+}
+@keyframes colorfill{
+    to{
+        fill: $highlight-color;
+    }
+}
+
+@keyframes enterLeft{
+    from{
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(20px);
+    }
+    to{
+        transform: translateX(-150vw);
+    }
+}
+@keyframes enterRight{
+    from{
+        transform: translateX(0);
+    }
+    10%{
+        transform: translateX(-20px);
+    }
+    to{
+        transform: translateX(150vw);
+    }
+}

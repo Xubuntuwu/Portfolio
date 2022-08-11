@@ -1,0 +1,112 @@
+@use 'contactsvg';
+$primary-color: #00ccff;
+$primary-color-h: 192;
+$primary-color-s: 100%;
+$primary-color-l: 50%;
+$secondary-color: #0694B8;
+$highlight-color: hsl(243, 100%, 69%);
+$highlight-color-darken: hsl(243, 90%, 60%);
+
+$title-font-size: 3rem;
+$card-amount-under: 3;
+$card-amount-over: 3;
+
+
+.main-contact{
+    // overflow: auto;
+    scroll-margin-top: 100px;
+    box-sizing: border-box;
+    background-color: $secondary-color;
+    display: flex;
+    padding: 3rem 3rem 1rem 3rem;
+    justify-content: space-around;
+    color: white;
+    font-size: large;
+    main{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .contact-info{
+            display: flex;
+            flex-direction: column;
+            .phone, .mail{
+                display: flex;
+                align-items: center;
+                gap: 0.5em;
+                width: fit-content;
+                &:hover, &.active{
+                    color: $highlight-color-darken;
+                    font-weight: bold; 
+                    font-size: 1.05em;
+                }
+                &.active{
+                    transition: transform 3s, scale 3s;
+                    transform: translateX(100px) scale(1.2);
+                }
+
+            }
+            .phone::before{
+                content: '';
+                align-content: center;
+                display: inline-block;
+                background-image: url('../assets/images/phone.svg');
+                height: 2em;
+                width: 2em;
+            }
+            .mail::before{
+                content: '';
+                display: inline-block;
+                background-image: url('../assets/images/email.svg');
+                height: 2em;
+                width: 2em;
+            }
+        }
+
+    }
+    .title{
+        font-size: $title-font-size;
+        font-weight: normal;
+    }
+    .personal-links{
+        display: flex;
+        height: 5em;
+        align-items: flex-end;
+        svg{
+            height: 3em;
+            width: auto;
+            transition: height 100ms;
+            // fill: white;
+        }
+        svg:hover{
+            height: 4em;
+            animation: 500ms jumping cubic-bezier(0, 1.01, 0.98, 0.99) infinite alternate,
+            250ms colorfill forwards;
+        }
+    }
+    #contact-svg{
+        svg{
+            transform: scale(0.8);
+            g#dots{
+                display: none;
+            }
+        }
+    }
+}
+
+@keyframes jumping{
+    from{
+        transform: translateY(0);
+    }
+
+    to{
+        transform: translateY(-20px);
+    }
+}
+@keyframes colorfill{
+    to{
+        fill: $highlight-color-darken;
+        // border: 5px solid black;
+        // border-radius: 50%;
+    }
+}

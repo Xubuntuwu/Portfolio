@@ -1,0 +1,85 @@
+$primary-color: #00ccff;
+$secondary-color: #0694B8;
+$highlight-color: #6961ff;
+
+.main-contact{
+
+    main{
+        .contact-info{
+            .phone:hover{
+
+            } 
+            .mail:hover{
+
+            }
+        }
+
+    }
+    #contact-svg{
+        svg{
+            #notification1{
+                transform-origin: center;
+                transform-box: fill-box;
+                &.notificationpop{
+                    animation: 2s notificationPop ease-in 1;
+                }
+            }
+            // #notification1:hover{
+            //     transition: 300ms;
+            //     transform: scale(1.1);
+            // }
+            #notification2{
+                transform-origin: center;
+                transform-box: fill-box;
+                &.notificationpop{
+                    transform-origin: center;
+                    transform-box: fill-box;
+                    animation: 2.5s notificationPop ease-in 1;
+                }
+            }
+            #notification3{
+                transform-origin: center;
+                transform-box: fill-box;
+                &.notificationpop{
+                    transform-origin: center;
+                    transform-box: fill-box;
+                    animation: 3s notificationPop ease-in 1;
+                }
+            }
+            #notification2, #notification3{
+                &:hover{
+                    animation: 300ms notificationBuzz linear infinite alternate;
+                }
+                &.notificationbuzz{
+                    animation: 300ms notificationBuzz linear infinite alternate;
+                }
+            }
+        }
+    }
+}
+
+@keyframes notificationPop{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    80%{
+        opacity: 1;
+        transform: scale(1.3);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes notificationBuzz{
+    from{
+        transform: scale(1);
+        opacity: 1;
+    }
+    to{
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
