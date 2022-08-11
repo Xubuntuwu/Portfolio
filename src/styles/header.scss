@@ -34,10 +34,12 @@ header{
             }
         }
         ul{
+            padding-left: 0;
             display: flex;
             min-width: fit-content;
-            width: 30vw;
+            min-width: 30vw;
             justify-content: space-between;
+            gap: 1.5rem;
             list-style: none;
             font-weight: bold;
             li:hover{
@@ -50,6 +52,40 @@ header{
         a{
             text-decoration: none;
             color: inherit;
+        }
+    }
+}
+@media (max-width: 500px) {
+    header{
+        padding: 0.5rem 10px 0.5rem 10px;
+        font-size: normal;
+        nav{
+            #logo{
+                // font-size: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            ul{
+                gap: 0.5rem;
+
+            }
+        }
+    }
+}
+
+@media (max-width: 385px) {
+    header{
+        padding: 5px 10px 5px 10px;
+        font-size: 14px;
+        nav{
+            ul{
+                gap: 0.9rem;
+                li{
+                    display: flex;
+                    align-items: center;
+                }
+            }
         }
     }
 }

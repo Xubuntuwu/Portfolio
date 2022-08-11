@@ -55,9 +55,10 @@ html, body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
     width: 100%;
-    max-width: 100vw;
+    max-width: 100vw !important;
     padding-bottom: 0;
     font-family: 'Playfair Display', sans-serif;
 
@@ -180,5 +181,63 @@ html, body{
     }
     to{
         transform: translateX(150vw);
+    }
+}
+
+@media (max-width: 1100px) {
+    .main-introduction{
+        display: flex;
+        padding-bottom: 5rem;
+        svg{
+            width: 60vw;
+        }
+        .content-wrap{
+            display: flex;
+            flex-direction: column;
+            max-height: fit-content;
+            gap: 2rem;
+            div.about-me{
+                height: auto;
+                flex-shrink: 1;
+                flex-grow: 1;
+                width: 60vw;
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .main-introduction{
+        display: flex;
+        padding-bottom: 5rem;
+        div.image-container{
+            height: 100vh;  
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;   
+        }
+        .main-image{
+            margin-top: auto;
+            display: block;
+        }
+        svg{
+            max-height: 100vh;
+            width: 90vw;
+        }
+        .name{
+            font-size: xx-large;
+        }
+        .content-wrap{
+            display: flex;
+            flex-direction: column;
+            max-height: fit-content;
+            gap: 2rem;
+            div.about-me{
+                height: auto;
+                flex-shrink: 1;
+                flex-grow: 1;
+                width: 100vw;
+            }
+        }
     }
 }

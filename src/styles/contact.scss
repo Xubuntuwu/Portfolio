@@ -14,6 +14,7 @@ $card-amount-over: 3;
 
 .main-contact{
     // overflow: auto;
+    max-width: 100%;
     scroll-margin-top: 100px;
     box-sizing: border-box;
     background-color: $secondary-color;
@@ -64,9 +65,14 @@ $card-amount-over: 3;
         }
 
     }
-    .title{
+    main .title{
+        display: block;
         font-size: $title-font-size;
         font-weight: normal;
+        width: 100%;
+    }
+    .title{
+        display: none;
     }
     .personal-links{
         display: flex;
@@ -108,5 +114,145 @@ $card-amount-over: 3;
         fill: $highlight-color-darken;
         // border: 5px solid black;
         // border-radius: 50%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .main-contact{
+        scroll-margin-top:0px;
+        padding: 3rem 1rem 3rem 1rem;
+        justify-content: space-between;
+        .title{
+            display: none;
+            width: 100%;
+
+        }
+        main>.title{
+            display: block;
+        }
+        #contact-svg{
+            display: flex;
+            width: 500px;
+            height: min-content;
+            align-self: center;
+            svg{
+                width: 500px;
+                height: min-content;
+                #phone-notification{
+                    width: 250px;
+                    max-width: max-content;
+                    height: max-content;
+                }
+            }
+        }
+    }
+    .main-contact{
+        main{
+            .contact-info{
+                .phone, .mail{
+                    &.active{
+                        transform: translateX(0) scale(1.05);
+                    }
+                }
+            }
+            .personal-links{
+                margin:0;
+            }
+        }
+    }
+}
+@media (max-width: 700px) {
+    .main-contact{
+        scroll-margin-top:0px;
+        padding: 3rem 1rem 3rem 1rem;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .title{
+            display: none;
+            width: 100%;
+
+        }
+        main>.title{
+            display: block;
+        }
+        #contact-svg{
+            display: flex;
+            width: 50%;
+            height: min-content;
+            align-self: center;
+            svg{
+                width: 400px;
+                height: min-content;
+                #phone-notification{
+                    width: 400px;
+                    max-width: max-content;
+                    height: max-content;
+                }
+            }
+        }
+    }
+    .main-contact{
+        main{
+            width: 50%;
+            .contact-info{
+                .phone, .mail{
+                    &.active{
+                        transform: translateX(0) scale(1.05);
+                    }
+                }
+            }
+            .personal-links{
+                margin:0;
+            }
+        }
+    }
+}
+@media (max-width: 500px) {
+    .main-contact{
+        scroll-margin-top:0px;
+        flex-direction: column;
+        padding: 3rem 1rem 3rem 1rem;
+        justify-content: space-between;
+        .title{
+            display: block;
+            width: 100%;
+            text-align: center;
+            order: 1;
+        }
+        main>.title{
+            display: none;
+        }
+        #contact-svg{
+            order: 2;
+            display: flex;
+            width: 250px;
+            height: min-content;
+            align-self: center;
+            svg{
+                width: 250px;
+                height: min-content;
+                #phone-notification{
+                    width: 250px;
+                    max-width: max-content;
+                    height: max-content;
+                }
+            }
+        }
+    }
+    .main-contact{
+        main{
+            order: 3;
+            gap: 0.5rem;
+            .contact-info{
+                .phone, .mail{
+                    &.active{
+                        transform: translateX(0) scale(1);
+                    }
+                }
+            }
+            .personal-links{
+                margin:0;
+            }
+        }
     }
 }

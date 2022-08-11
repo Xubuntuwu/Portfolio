@@ -168,9 +168,20 @@ $card-amount-over: 3;
     }
 }
 
+@media (max-width: 500px) {
+    .main-work-container #project-container{
+        padding: 0 1rem 0 1rem;
+        // --grid-item--min-width: 320px;
+    }
+    .main-work-container{
+        padding: 0 0 0 0;
+    }
+}
+
 @media screen and (max-width: 350px){
-    #project-container{
+    .main-work-container #project-container{
         --grid-item--min-width: 320px;
+        padding: 0 0 0 0;
     }
     .main-work-container{
         padding: 0 0 0 0;

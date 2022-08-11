@@ -1,9 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-// var TweenMax = require('gsap');
-var ScrollMagic = require('scrollmagic');
-// require('ScrollMagicGSAP');
 
 
 module.exports = {
@@ -80,9 +77,4 @@ module.exports = {
             template: 'src/template.html'
         }),
     ],
-    // resolve: {
-    //     alias: {
-    //       'ScrollMagicGSAP': 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap'
-    //     }
-    //   }
 }

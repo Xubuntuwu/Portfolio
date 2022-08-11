@@ -38,10 +38,10 @@ $highlight-color: #6C63FF;
     text-align: center;
     // font-variant-caps: all-small-caps;
     transition: transform 1s, opacity 1s, width 200ms, height 200ms;
-    &.highlight{
-        width: 350px;
-        height: 230px;
-    }
+    // &.highlight{
+    //     width: 350px;
+    //     height: 230px;
+    // }
   }
     .carousel__cell.firebase{
         background-color: hsl(40, 100%, 90%);
@@ -79,3 +79,12 @@ $highlight-color: #6C63FF;
     .carousel__cell.git{
         background-color: hsl(43, 100%, 90%);
     }
+
+@media (max-width: 385px) {
+    .scene {
+        width: 320px;
+    }
+    .carousel__cell {
+        width: 300px;
+    }
+}
