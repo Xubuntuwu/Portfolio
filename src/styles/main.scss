@@ -12,12 +12,16 @@ $primary-color-h: 192;
 $primary-color-s: 91%;
 $primary-color-l: 36%;
 $title-font-size: 3rem;
+$secondary-color: #0694B8;
+$highlight-color: #6C63FF;
+$light-black-color: #3F3D56;
 
 html, body{
     padding: 0;
     margin: 0;
     height: 100%;
     max-width: 100vw;
+    overflow-x: hidden;
 }
 
 
@@ -82,17 +86,28 @@ html, body{
     svg{
         max-height: 80vh;
         width: 45vw;
+        margin-top: 1.5rem;
     }
     .name{
-        font-size: 4vw;
         position: absolute;
         bottom: 5%;
         left: 0;
         right: 0;
         text-align: center;
         margin-bottom: 0;
+    }
+    #name{
+        // font-size: 4vw;
         color: white;
+        font-size: 2.5rem;
         @include text-outline($highlight-color, 1px)
+    }
+    #job{
+        font-size: 3rem;
+        font-weight: bolder;
+        // color: $highlight-color;
+        color: $highlight-color;
+        font-family: sans-serif;
     }
     div.about-me{
         background-color: white;

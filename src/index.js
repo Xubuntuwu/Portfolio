@@ -255,3 +255,33 @@ function HeaderScrollToSection(){
     }
 }
 HeaderScrollToSection();
+
+// const leftarrow = document.getElementsByClassName('previous');
+// const rightarrow = document.getElementsByClassName('next');
+// for(let i=0; i<leftarrow.length;i++){
+//     leftarrow[i].innerHTML= 
+//     `<svg width="81" height="74" viewBox="0 0 81 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+//     <g id="arrow-left-svgrepo-com(4) 1" clip-path="url(#clip0_4_2)">
+//     <path id="arrow" d="M8.10154 34.7851L5.67717 37L8.10154 39.2149L34.4265 63.2649L39.45 67.8542V61.05V51.1H68.85H71.85V48.1V25.9V22.9H68.85H39.45V12.95V6.1458L34.4265 10.7351L8.10154 34.7851Z" stroke-width="6"/>
+//     </g>
+//     <defs>
+//     <clipPath id="clip0_4_2">
+//     <rect width="81" height="74" fill="white"/>
+//     </clipPath>
+//     </defs>
+//     </svg>`;
+// }
+// for(let i=0; i<rightarrow.length;i++){
+//     rightarrow[i].innerHTML= 
+//     `<svg width="81" height="74" viewBox="0 0 81 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+//     <g id="arrow" clip-path="url(#clip0_4_2)">
+//     <path d="M72.8985 39.2149L75.3228 37L72.8985 34.7851L46.5735 10.7351L41.55 6.14581V12.95L41.55 22.9H12.15H9.15001V25.9L9.15001 48.1V51.1H12.15L41.55 51.1V61.05V67.8542L46.5735 63.2649L72.8985 39.2149Z" stroke-width="6"/>
+//     </g>
+//     <defs>
+//     <clipPath id="clip0_4_2">
+//     <rect width="81" height="74" fill="white" transform="translate(81 74) rotate(-180)"/>
+//     </clipPath>
+//     </defs>
+//     </svg>
+//     `;
+// }

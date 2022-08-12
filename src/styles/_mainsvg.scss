@@ -8,7 +8,7 @@
         #book2{
             transform-origin: center;
             transform-box: fill-box;
-            animation: 3s flyingUpDown linear infinite alternate-reverse;
+            animation: 4s flyingUpDown linear infinite alternate-reverse;
         }
         #head{
             transform-origin: bottom;
@@ -33,10 +33,10 @@
         transform: translateY(20px) rotateZ(-15deg);
     }
     20%{
-        transform: translateY(40px) rotateZ(15deg);
+        transform: translateY(40px) rotateZ(30deg);
     }
     30%{
-        transform: translateY(60px) rotateZ(-15deg);
+        transform: translateY(60px) rotateZ(-30deg);
     }
     40%{
         transform: translateY(80px) rotateZ(15deg);

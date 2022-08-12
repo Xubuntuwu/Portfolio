@@ -36,12 +36,7 @@ $highlight-color: #6C63FF;
     font-weight: bold;
     color: black;
     text-align: center;
-    // font-variant-caps: all-small-caps;
     transition: transform 1s, opacity 1s, width 200ms, height 200ms;
-    // &.highlight{
-    //     width: 350px;
-    //     height: 230px;
-    // }
   }
     .carousel__cell.firebase{
         background-color: hsl(40, 100%, 90%);

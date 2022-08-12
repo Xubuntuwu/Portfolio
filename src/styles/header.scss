@@ -4,6 +4,7 @@ $primary-color-s: 100%;
 $primary-color-l: 50%;
 $secondary-color: #0694B8;
 $highlight-color: #6C63FF;
+$light-black-color: #3F3D56;
 
 $title-font-size: 3rem;
 $card-amount-under: 3;
@@ -18,7 +19,7 @@ header{
     padding: 0.5rem 3rem 0.5rem 3rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
-    background-color: #3F3D56;
+    background-color: $light-black-color;
     z-index: 10;
     color: white;
     nav{

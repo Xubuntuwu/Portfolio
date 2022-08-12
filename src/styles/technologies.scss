@@ -5,25 +5,18 @@ $primary-color-s: 100%;
 $primary-color-l: 50%;
 $secondary-color: #0694B8;
 $highlight-color: #6C63FF;
+$light-black-color: #3F3D56;
 
 $title-font-size: 3rem;
 
 .main-technologies-container{
-    max-height: 100vh;
-    min-height: 300px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    scroll-margin-top: 100px;
+    scroll-margin-top: 20px;
     overflow: hidden;
-
-    // border: none;
-    // position: relative;
-    // width: 210px;
-    // height: 140px;
-    // margin: 80px auto;
-    // perspective: 1000px;
 
     .title{
         padding: 0 5rem 0 5rem;
@@ -34,5 +27,60 @@ $title-font-size: 3rem;
     }
     img{
         max-height: 100%;  
+    }
+    .controls{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        button{
+            padding: 0.5rem;
+            font-size: large;
+            background-color: $secondary-color;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            border: none;
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+        button.previous, button.next{
+            // background-color: inherit;
+            &:hover{
+                filter: brightness(1.3);
+            }
+            &:active{
+                filter: contrast(2);
+
+            }
+            svg{
+                max-height: 50px;
+                stroke: $light-black-color;
+                &:hover{
+                    transition:  stroke 500ms;
+                    stroke: $highlight-color;
+                }
+                &:active{
+                    transition:  fill 500ms;
+                    stroke: $highlight-color;
+                    fill: $highlight-color;
+                }
+            }
+            &.inactive{
+                pointer-events: none;
+                cursor: default;
+                svg{
+                    stroke: gray;
+                    fill: gray;
+                }
+            }
+        }
+        button.fullview{
+            &:hover{
+                filter: brightness(1.3);
+            }
+            &:active{
+                filter: contrast(2);
+            }
+        }
     }
 }
