@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     performance: {
         maxEntrypointSize: 512000,
         maxAssetSize: 512000,
