@@ -13,7 +13,7 @@ import externalLinkPic from './assets/images/open-in-new.svg';
 import ToDuess from './assets/images/ToDueScreenshot.png';
 import Fakebookss from './assets/images/fakebook-test.gif';
 import Weatherss from './assets/images/weather-app-screenshot.png';
-import FakeStoress from './assets/images/fake-store-screenshot.png';
+import FakeStoress from './assets/images/fake-store-screenshot-min.png';
 import Battleshipss from './assets/images/battleship-screenshot.png';
 import CVMakerss from './assets/images/cvmaker-sreenshot.png';
 
