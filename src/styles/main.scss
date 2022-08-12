@@ -108,6 +108,9 @@ html, body{
         // color: $highlight-color;
         color: $highlight-color;
         font-family: sans-serif;
+        &::selection{
+            background-color: white;
+        }
     }
     div.about-me{
         background-color: white;
