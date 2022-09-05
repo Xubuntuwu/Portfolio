@@ -30,15 +30,16 @@ html, body{
 }
 
 ::-webkit-scrollbar {
-    width: 10px; /* Mostly for vertical scrollbars */
-    height: 10px; /* Mostly for horizontal scrollbars */
+    width: 5px; /* Mostly for vertical scrollbars */
+    height: 0px; /* Mostly for horizontal scrollbars */
   }
 ::-webkit-scrollbar-thumb { /* Foreground */
     background: $highlight-color;
     border-radius: 50px;
   }
 ::-webkit-scrollbar-track { /* Background */
-    background-color: $primary-color;
+    // background-color: $primary-color;
+    background-color: transparent;
   }
 
 #load{
