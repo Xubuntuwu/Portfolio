@@ -35,7 +35,7 @@ $card-amount-over: 3;
                 display: flex;
                 align-items: center;
                 gap: 0.5em;
-                width: fit-content;
+                width: max-content;
                 &:hover, &.active{
                     color: $highlight-color-darken;
                     font-weight: bold; 
@@ -51,6 +51,8 @@ $card-amount-over: 3;
                 content: '';
                 align-content: center;
                 display: inline-block;
+                background-repeat: no-repeat;
+                background-position: center;
                 background-image: url('../assets/images/phone.svg');
                 height: 2em;
                 width: 2em;
@@ -58,6 +60,8 @@ $card-amount-over: 3;
             .mail::before{
                 content: '';
                 display: inline-block;
+                background-repeat: no-repeat;
+                background-position: center;
                 background-image: url('../assets/images/email.svg');
                 height: 2em;
                 width: 2em;
